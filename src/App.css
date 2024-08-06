@@ -1,38 +1,186 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Orbitron:wght@400;700&display=swap');
+
+/* Dark Theme Styling with Attractive Fonts */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0a0a0a;
+  color: #f0f0f0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+center {
+  background-color: #1a1a1a;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  color: #00ffff;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 10px;
+}
+
+label {
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+  color: #ff79c6;
+  font-weight: 600;
+}
+
+input[type="number"],
+input[type="checkbox"] {
+  margin-bottom: 5px;
+  
+}
+
+input[type="number"] {
+  width: 8%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #3d3d3d;
+  border-radius: 10px;
+  background-color: #2c2c2c;
+  color: #f0f0f0;
+  outline: none;
+  transition: all 0.3s ease;
+  font-family: 'Orbitron', sans-serif;
+}
+
+input[type="number"]:focus {
+  border-color: #00ffff;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.checkbox-group label {
+  margin-left: 10px;
+  font-size: 1rem;
+  color: #f0f0f0;
+  font-weight: 400;
+}
+
+.btn {
+  background-color: #00ffff;
+  border: none;
+  color: #0a0a0a;
+  padding: 10px 20px;
+  margin: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn:hover {
+  background-color: #00cccc;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+h2 {
+  margin-top: 15px;
+  word-break: break-all;
+  font-size: 1.6rem;
+  color: #50fa7b;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 2px;
+}
+
+.Toastify__toast-container {
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.Toastify__toast--success {
+  background: #50fa7b;
+  color: #0a0a0a;
+}
+
+.Toastify__toast--warning {
+  background: #ff79c6;
+  color: #0a0a0a;
+}
+
+/* Footer Styling */
+.footer {
+  flex-shrink: 0;
+  background-color: #373535;
+  padding: 15px;
+  text-align: center;
+  color: #f0f0f0;
+  border-top: 1px solid #3d3d3d;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer p {
+  margin: 8px 0;
+  font-size: 1rem;
+  color: #c3bdcb;
+}
+
+.footer-icons {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin-top: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.footer a {
+  margin: 0 10px;
+  color: #7cc4d9;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer a img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.2s, opacity 0.2s;
+  opacity: 0.8;
+}
+
+.footer a img:hover {
+  transform: scale(1.2);
+  opacity: 1;
 }
